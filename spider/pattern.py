@@ -1,9 +1,14 @@
 __author__ = 'CQC'
 import re
 
-pattern = re.compile(r'\d+')
+pattern = re.compile(r'(\w+) (\w+)')
+s = 'i say, hello world'
+# print re.sub(pattern, r'\2 \1', s)
+print re.sub(pattern, r'\2 \2', s)
+
+# pattern = re.compile(r'\d+')
 # print re.split(pattern, 'one1two222three3four4')
-print re.findall(pattern, 'one1two222three3four4')
+# print re.findall(pattern, 'one1two222three3four4')
 
 # pattern = re.compile(r'world')
 # # match = re.search(pattern, 'hello world!')
